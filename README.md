@@ -1,32 +1,27 @@
-# Task-01-BarChart-Histogram
-# Task 01 - Bar Chart / Histogram Visualization
-# Dataset: World Population - https://data.worldbank.org/indicator/SP.POP.TOTL
+# Task-01: Bar Chart / Histogram Visualization
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+## 🎯 Objective
+To create a bar chart and histogram that visualizes the distribution of population across various countries using Python libraries.
 
-# Sample population data (you can replace this with actual dataset)
-data = {
-    'Country': ['India', 'China', 'USA', 'Indonesia', 'Pakistan', 'Brazil', 'Nigeria', 'Bangladesh', 'Russia', 'Mexico'],
-    'Population (in Millions)': [1417, 1440, 331, 276, 240, 214, 223, 169, 146, 126]
-}
+## 📊 Dataset
+Sample population data inspired by [World Bank Indicators](https://data.worldbank.org/indicator/SP.POP.TOTL).
 
-df = pd.DataFrame(data)
+| Country     | Population (in Millions) |
+|-------------|---------------------------|
+| China       | 1440                      |
+| India       | 1417                      |
+| USA         | 331                       |
+| Indonesia   | 276                       |
+| Pakistan    | 240                       |
+| Brazil      | 214                       |
+| Nigeria     | 223                       |
+| Bangladesh  | 169                       |
+| Russia      | 146                       |
+| Mexico      | 126                       |
 
-# Bar Chart
-plt.figure(figsize=(10, 6))
-sns.barplot(x='Population (in Millions)', y='Country', data=df, palette='viridis')
-plt.title('Population by Country - Bar Chart')
-plt.xlabel('Population (in Millions)')
-plt.ylabel('Country')
-plt.tight_layout()
-plt.show()
+## 📚 Technologies Used
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
 
-# Histogram
-plt.figure(figsize=(8, 5))
-sns.histplot(df['Population (in Millions)'], bins=5, kde=True, color='skyblue')
-plt.title('Distribution of Population - Histogram')
-plt.xlabel('Population (in Millions)')
-plt.tight_layout()
-plt.show()
